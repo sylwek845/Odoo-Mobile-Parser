@@ -70,11 +70,14 @@ namespace OdooPythonToJava.Wrappers
             //Generate OColumns first 
             GenerateOColumns();
             // 
-            
+
             moduleNameJava = OColumnGenerator.GenerateRelationClassName(moduleName);
             configData.ModuleNameJava = moduleNameJava;
             configData.ModuleNamePython = moduleName;
-            configData.Authority = configData.Authority + "."+ moduleName.Replace('.', '_');
+            if (!configData.IsAuthorityUpdated) { 
+                configData.Authority = configData.Authority + "." + moduleName.Replace('.', '_');
+                configData.IsAuthorityUpdated = true;
+            }
 
             model.Append("package ");
             model.Append(configData.PackageName);

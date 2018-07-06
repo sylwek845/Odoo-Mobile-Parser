@@ -124,6 +124,7 @@
             this.txtProjectPath.ReadOnly = true;
             this.txtProjectPath.Size = new System.Drawing.Size(278, 20);
             this.txtProjectPath.TabIndex = 9;
+            this.txtProjectPath.Text = "C:\\Users\\Sylwek\\StudioProjects\\Odoo-Mobile";
             this.txtProjectPath.Click += new System.EventHandler(this.TextBox1_Click);
             // 
             // label2

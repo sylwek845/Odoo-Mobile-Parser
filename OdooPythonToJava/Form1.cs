@@ -48,8 +48,7 @@ namespace OdooPythonToJava
             else
             {            
             try
-            {
-
+            {               
                 OModel = new ModuleWrapper(txtCVS.Text, config).Parse();
                 txtJava.Text = OModel;
                 xmlAdapter = new XMLAdapterGenerator(config).Generate();
@@ -142,6 +141,7 @@ namespace OdooPythonToJava
                     readFolders.ReadPackageName();
                     txtPackageName.Text = config.PackageName;
                     config.Authority = config.PackageName + ".addons." + txtFolderName.Text;
+                    config.IsAuthorityUpdated = false;
                     btnParse.Enabled = true;
                 }
                 catch (Exception)
