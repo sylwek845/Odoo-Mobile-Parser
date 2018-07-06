@@ -14,8 +14,9 @@ How to use it.
 4. Select fields you want to parse (make sure to not mark odoo base fields eg. write_date,id etc)
 5. Click on Action and Export
 6. Use CSV Format.
-7. Select following fields [required],[model],[relation],[name],[ttype],[field_description],[relation_field],[relation_table] and save it for later ;).
+7. Select "Export all Data" and following fields "Required","Object Relation","Field Name","Field Type","Field Label","Relation field","Relation table","Model/ID","Model/Model" and save it for later ;).
 8. Click Export to File and save the file.
+9. Modify the file and change model/model for model and save it.
 
 Open the Odoo Mobile Parser exe
 1. Select CSV file.

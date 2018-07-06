@@ -46,13 +46,17 @@ namespace OdooPythonToJava.Wrappers
             var csv = new CsvReader(textReader);
             csv.Configuration.HeaderValidated = null;
             var records = csv.GetRecords<ColumnData>();
-
+            bool moduleNameUpdated = false;
             try
             {
-                ColumnData c = records.First();
-                moduleName = records.First().Model;
+                
                 foreach (var item in records)
                 {
+                    if (!moduleNameUpdated)
+                    {                       
+                        moduleName = item.Model;
+                        moduleNameUpdated = true;
+                    }
                     string col = new OColumnGenerator().GetOColumn(item);
                     if (col != null)
                     {
